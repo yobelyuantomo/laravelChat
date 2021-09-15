@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
+    "laravel-echo": "^1.11.0",
+    "particles.vue": "^2.15.0",
+    "pusher-js": "^7.0.3",
+    "vue": "^2.6.14",
+    "vue-chat-scroll": "^2.0.0-alpha.4",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
@@ -39,7 +46,19 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "indent": "off",
+      "space-before-function-paren": "off",
+      "eqeqeq": "off",
+      "spaced-comment": "off",
+      "padded-blocks": "off",
+      "keyword-spacing": "off",
+      "space-before-blocks": "off",
+      "brace-style": "off",
+      "no-trailing-spaces": "off",
+      "dot-notation": "off",
+      "camelcase": "off"
+    }
   },
   "browserslist": [
     "> 1%",
