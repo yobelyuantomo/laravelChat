@@ -20,8 +20,11 @@ Vue.config.productionTip = false
 Vue.use(Particles)
 Vue.prototype.$http = axios
 
-Vue.prototype.$api = 'http://nirbana.tripleway.xyz/api'
-Vue.prototype.$main = 'http://nirbana.tripleway.xyz'
+Vue.prototype.$api = 'https://api.nirbana.id/api'
+Vue.prototype.$main = 'https://api.nirbana.id'
+
+// Vue.prototype.$api = 'http://nirbana.tripleway.xyz/api'
+// Vue.prototype.$main = 'http://nirbana.tripleway.xyz'
 
 // Vue.prototype.$api = 'http://127.0.0.1:8000/api'
 // Vue.prototype.$main = 'http://127.0.0.1:8000'

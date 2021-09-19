@@ -64,7 +64,7 @@
     import Echo from 'laravel-echo'
 
     window.Echo = new Echo({
-    authEndpoint: 'http://nirbana.tripleway.xyz/broadcasting/auth',
+    authEndpoint: 'https://api.nirbana.id/api/broadcasting/auth',
     broadcaster: 'pusher',
     key: '6Lv8ynPWXkFIJ1b1FV37',
     wsHost: 'localhost',
@@ -131,7 +131,7 @@
             },
 
             getCurrentUser(){
-                this.$http.get(this.$api + '/getCurrentUser', {
+                this.$http.get(this.$api + '/getCurrentUser2', {
                     headers: {
                         Authorization: 'Bearer ' + localStorage.getItem('token')
                     }
@@ -163,6 +163,7 @@
                     }
                 }).then(response => {
                     this.messages = response.data
+                    console.log(this.messages)
                 })
             },
 
@@ -186,6 +187,8 @@
                         message: this.newMessage
                     })
 
+                    console.log(this.messages)
+
                     if(this.messageType == 'General'){
                         this.fdMessage.append('message', this.newMessage)
                         url = this.$api + '/generalMessages'
@@ -203,6 +206,8 @@
                             'X-Socket-Id': window.Echo.socketId()
                         }
                     })
+
+                    console.log(window.Echo.socketId())
                 }
             },
 
