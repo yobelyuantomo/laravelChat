@@ -67,10 +67,13 @@
     authEndpoint: 'https://api.nirbana.id/api/broadcasting/auth',
     broadcaster: 'pusher',
     key: '6Lv8ynPWXkFIJ1b1FV37',
-    wsHost: 'localhost',
+    wsHost: window.location.hostname,
+    wssHost: window.location.hostname,
     wsPort: 6001,
-    forceTLS: false,
+    wssPort: 6001,
     disableStats: true,
+    forceTLS: false,
+    enabledTransports: ['ws', 'wss'],
     encrypted: true,
         auth: {
             headers: {
